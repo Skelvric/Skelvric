@@ -291,7 +291,7 @@ export const translations = {
     footer: {
       copy: "© 2026 Skelvric — Deeper Than Code.",
       links: [
-        { label: "Privacy", href: "/privacy" },
+        { label: "Privacy Policy", href: "/privacy-policy" },
         { label: "Terms of Use", href: "/terms-of-use" },
         { label: "Careers", href: "/careers" },
       ],
@@ -501,7 +501,7 @@ export const translations = {
     footer: {
       copy: "© 2026 Skelvric — Koddan Daha Derin.",
       links: [
-        { label: "Gizlilik", href: "/privacy" },
+        { label: "Gizlilik Politikası", href: "/privacy-policy" },
         { label: "Kullanım Koşulları", href: "/terms-of-use" },
         { label: "Kariyer", href: "/careers" },
       ],
