@@ -272,6 +272,222 @@ nav a:hover {
   border-color: var(--text)
 }
 
+/* Settings Widget */
+
+.settings-widget {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Trigger Button */
+
+.settings-fab {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+/* Light Mode Button */
+
+.settings-widget.light .settings-fab {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.settings-widget.light .settings-fab:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+/* Dark Mode Button */
+
+.settings-widget.dark .settings-fab {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+.settings-widget.dark .settings-fab:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.settings-fab svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.4s ease;
+}
+
+.settings-fab.active svg {
+  transform: rotate(90deg);
+}
+
+/* Drop-Down Menu */
+
+.settings-menu {
+  width: 220px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px) scale(0.97);
+  transform-origin: bottom right;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.settings-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+/* Menu Theme Colors */
+
+.settings-widget.light .settings-menu {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.settings-widget.dark .settings-menu {
+  background: #0f0f0f;
+  border: 1px solid #262626;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Category Sections */
+
+.settings-section {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0;
+  border-bottom: 1px solid;
+}
+
+.settings-section:last-child {
+  border-bottom: none;
+}
+
+.settings-widget.light .settings-section {
+  border-color: #f0f0f0;
+}
+
+.settings-widget.dark .settings-section {
+  border-color: #1a1a1a;
+}
+
+/* Category Label */
+
+.settings-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 8px 16px 4px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings-widget.light .settings-label {
+  color: #888888;
+}
+
+.settings-widget.dark .settings-label {
+  color: #777777;
+}
+
+.settings-widget.light .settings-label::before {
+  background-color: #888888;
+}
+
+.settings-widget.dark .settings-label::before {
+  background-color: #777777;
+}
+
+/* Options */
+
+.settings-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: inherit;
+  transition: background 0.15s ease;
+  outline: none;
+}
+
+/* Light Theme Options */
+
+.settings-widget.light .settings-option {
+  color: #111111;
+  border-radius: 100px;
+  margin: 2.5px 12px;
+}
+
+.settings-widget.light .settings-option:hover {
+  background: #f5f5f5;
+}
+
+.settings-widget.light .settings-option.selected {
+  font-weight: bold;
+  background: #efefef;
+}
+
+/* Dark Theme Options */
+
+.settings-widget.dark .settings-option {
+  color: #eeeeee;
+  border-radius: 100px;
+  margin: 2.5px 12px;
+}
+
+.settings-widget.dark .settings-option:hover {
+  background: #1a1a1a;
+}
+
+.settings-widget.dark .settings-option.selected {
+  font-weight: bold;
+  background: #222222;
+}
+
+/* Check Icon */
+
+.check-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.2s ease;
+}
+
+.settings-option.selected .check-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /* Hero */
 
 .hero {
@@ -1419,6 +1635,7 @@ select:focus {
 */
 
 @media (max-width: 480px) {
+
   /*
     Reducing Header Padding On Mobile
   */
