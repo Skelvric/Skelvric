@@ -1,0 +1,26 @@
+.gridRow {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .gridRow { grid-template-columns: repeat(4, 1fr); }
+}
+
+.cell {
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.btn {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--hover-bg);
+  color: var(--text-color);
+}

@@ -1,0 +1,27 @@
+.cell {
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  width: 100%;
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marqueeContent {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
