@@ -33,7 +33,13 @@ export default function Work({ lang }: { lang: Locale }) {
 
       <div className={styles.gridRow}>
         {data.projects.map((project, index) => (
-          <div key={index} className={`${styles.cell} col-span-1 md:col-span-2 ${styles.projectCard} group`}>
+          <a
+            key={index}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.cell} col-span-1 md:col-span-2 ${styles.projectCard} group block`}
+          >
             <div className={styles.imageWrapper}>
               <span className="absolute top-4 left-4 z-10 bg-[var(--bg-color)] text-[var(--text-color)] px-2 py-1 text-[10px] uppercase font-mono font-bold border border-[var(--border-color)]">
                 {project.tag}
@@ -45,7 +51,7 @@ export default function Work({ lang }: { lang: Locale }) {
               <h3 className="text-2xl font-black uppercase tracking-tight mb-2">{project.title}</h3>
               <p className="text-sm font-medium text-[var(--muted-text)]">{project.desc}</p>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
