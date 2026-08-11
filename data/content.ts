@@ -35,12 +35,14 @@ export const content = {
         {
           tag: "Next.js",
           title: "SkelVault",
-          desc: "A modern password manager focused on secure credential management and a clean user experience."
+          desc: "A modern password manager focused on secure credential management and a clean user experience.",
+          link: "https://github.com/Skelvric/SkelVault"
         },
         {
           tag: "Electron",
           title: "SkelVault Desktop",
-          desc: "The desktop client for the SkelVault ecosystem."
+          desc: "The desktop client for the SkelVault ecosystem.",
+          link: "https://github.com/Skelvric/SkelVault-Desktop"
         }
       ]
     },
@@ -132,12 +134,14 @@ export const content = {
         {
           tag: "Next.js",
           title: "SkelVault",
-          desc: "Güvenli kimlik bilgisi yönetimine ve temiz bir kullanıcı deneyimine odaklanan modern bir parola yöneticisi."
+          desc: "Güvenli kimlik bilgisi yönetimine ve temiz bir kullanıcı deneyimine odaklanan modern bir parola yöneticisi.",
+          link: "https://github.com/Skelvric/SkelVault"
         },
         {
           tag: "Electron",
           title: "SkelVault Masaüstü",
-          desc: "SkelVault ekosistemi için masaüstü istemcisi."
+          desc: "SkelVault ekosistemi için masaüstü istemcisi.",
+          link: "https://github.com/Skelvric/SkelVault-Desktop"
         }
       ]
     },
