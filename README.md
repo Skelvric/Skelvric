@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./Preview.png" alt="Skelvric Preview" width="800">
+</p>
+
 ### Skelvric
 
 > **Skelvric** is a modern software agency building high-performance full-stack web applications, custom digital products, and scalable software solutions.
