@@ -34,15 +34,15 @@ export const content = {
       projects: [
         {
           tag: "Next.js",
-          title: "SkelVault",
+          title: "SkelPass",
           desc: "A modern password manager focused on secure credential management and a clean user experience.",
-          link: "https://github.com/Skelvric/SkelVault"
+          link: "https://github.com/Skelvric/SkelPass"
         },
         {
           tag: "Electron",
-          title: "SkelVault Desktop",
-          desc: "The desktop client for the SkelVault ecosystem.",
-          link: "https://github.com/Skelvric/SkelVault-Desktop"
+          title: "SkelPass Desktop",
+          desc: "The desktop client for the SkelPass ecosystem.",
+          link: "https://github.com/Skelvric/SkelPass-Desktop"
         }
       ]
     },
@@ -133,15 +133,15 @@ export const content = {
       projects: [
         {
           tag: "Next.js",
-          title: "SkelVault",
+          title: "SkelPass",
           desc: "Güvenli kimlik bilgisi yönetimine ve temiz bir kullanıcı deneyimine odaklanan modern bir parola yöneticisi.",
-          link: "https://github.com/Skelvric/SkelVault"
+          link: "https://github.com/Skelvric/SkelPass"
         },
         {
           tag: "Electron",
-          title: "SkelVault Masaüstü",
-          desc: "SkelVault ekosistemi için masaüstü istemcisi.",
-          link: "https://github.com/Skelvric/SkelVault-Desktop"
+          title: "SkelPass Masaüstü",
+          desc: "SkelPass ekosistemi için masaüstü istemcisi.",
+          link: "https://github.com/Skelvric/SkelPass-Desktop"
         }
       ]
     },
