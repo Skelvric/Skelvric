@@ -25,8 +25,7 @@ export default function Footer({ lang }: { lang: Locale }) {
       </div>
 
       <div className={`${styles.cell} col-span-1 p-10 md:p-16 flex flex-col`}>
-        <span className="text-[10px] font-mono uppercase tracking-widest opacity-50 mb-8 block">{data.locTitle}</span>
-        <div className="text-sm font-bold uppercase mb-6">{data.loc}</div>
+        <span className="text-[10px] font-mono uppercase tracking-widest opacity-50 mb-8 block">{data.contactTitle}</span>
 
         <div className="flex flex-col gap-2 mb-8">
           <a href="https://github.skelvric.com" target="_blank" rel="noopener noreferrer" className="text-xs font-mono font-bold hover:italic transition-colors">

@@ -3,13 +3,13 @@ export type Locale = 'en' | 'tr';
 export const content = {
   en: {
     nav: {
-      title: "Skelvric.",
+      title: "Skelvric",
       est: "Est. 2026",
       status: "Status: Online",
       role: "Software Development Agency",
-      founder: "Founder / Software Engineer",
+      founder: "Founder And Full-Stack Developer",
       founderName: "Batuhan Kurkut",
-      btn: "Get in Touch →",
+      btn: "Get In Touch →",
       links: { services: "Services", work: "Work" }
     },
     hero: {
@@ -36,13 +36,22 @@ export const content = {
           tag: "Next.js",
           title: "SkelPass",
           desc: "A modern password manager focused on secure credential management and a clean user experience.",
-          link: "https://github.com/Skelvric/SkelPass"
+          link: "https://github.com/Skelvric/SkelPass",
+          fullWidth: false
         },
         {
           tag: "Electron",
           title: "SkelPass Desktop",
           desc: "The desktop client for the SkelPass ecosystem.",
-          link: "https://github.com/Skelvric/SkelPass-Desktop"
+          link: "https://github.com/Skelvric/SkelPass-Desktop",
+          fullWidth: false
+        },
+        {
+          tag: "Next.js",
+          title: "Codeum",
+          desc: "Open-Source Platform for Practicing Real-World Developer Skills Through Short, Focused Coding Challenges.",
+          link: "https://github.com/Skelvric/Codeum",
+          fullWidth: true
         }
       ]
     },
@@ -87,13 +96,12 @@ export const content = {
       title2: "Initialize",
       title3: "Your Project?",
       email: "hello@skelvric.com",
-      location: "Türkiye"
+      location: "Bilecik, Türkiye"
     },
     footer: {
       desc: "Reliable, scalable, and meticulously engineered software products.",
       navTitle: "Navigation",
-      locTitle: "Location & Contact",
-      loc: "Türkiye",
+      contactTitle: "Contact",
       rights: "© 2026 All Rights Reserved.",
       navServices: "Services",
       navWork: "Work",
@@ -102,11 +110,11 @@ export const content = {
   },
   tr: {
     nav: {
-      title: "Skelvric.",
-      est: "Est. 2026",
+      title: "Skelvric",
+      est: "2026'dan beri.",
       status: "Durum: Çevrimiçi",
       role: "Yazılım Geliştirme Ajansı",
-      founder: "Kurucu / Yazılım Mühendisi",
+      founder: "Kurucu Ve Full-Stack Geliştirici",
       founderName: "Batuhan Kurkut",
       btn: "İletişime Geç →",
       links: { services: "Uzmanlık", work: "İşler" }
@@ -135,13 +143,22 @@ export const content = {
           tag: "Next.js",
           title: "SkelPass",
           desc: "Güvenli kimlik bilgisi yönetimine ve temiz bir kullanıcı deneyimine odaklanan modern bir parola yöneticisi.",
-          link: "https://github.com/Skelvric/SkelPass"
+          link: "https://github.com/Skelvric/SkelPass",
+          fullWidth: false
         },
         {
           tag: "Electron",
           title: "SkelPass Masaüstü",
           desc: "SkelPass ekosistemi için masaüstü istemcisi.",
-          link: "https://github.com/Skelvric/SkelPass-Desktop"
+          link: "https://github.com/Skelvric/SkelPass-Desktop",
+          fullWidth: false
+        },
+        {
+          tag: "Next.js",
+          title: "Codeum",
+          desc: "Kısa ve odaklanmış kodlama görevleri aracılığıyla gerçek dünya geliştirici becerilerini pratik etmeye yönelik açık kaynaklı bir platform.",
+          link: "https://github.com/Skelvric/Codeum",
+          fullWidth: true
         }
       ]
     },
@@ -186,13 +203,12 @@ export const content = {
       title2: "Başlatmaya",
       title3: "Hazır mısın?",
       email: "hello@skelvric.com",
-      location: "Türkiye"
+      location: "Bilecik, Türkiye"
     },
     footer: {
       desc: "Güvenilir, ölçeklenebilir ve titizlikle mühendislik edilmiş yazılım ürünleri.",
       navTitle: "Navigasyon",
-      locTitle: "Lokasyon & İletişim",
-      loc: "Türkiye",
+      contactTitle: "İletişim",
       rights: "© 2026 Tüm Hakları Saklıdır.",
       navServices: "Uzmanlık",
       navWork: "İşler",

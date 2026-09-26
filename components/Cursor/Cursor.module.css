@@ -1,0 +1,71 @@
+.cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	pointer-events: none;
+	z-index: 999999;
+	opacity: 0;
+	transform:
+		translate3d(calc(var(--cursor-x, -100px) - 50%),
+			calc(var(--cursor-y, -100px) - 50%),
+			0) rotate(45deg) scale(0.9);
+	transition:
+		opacity 0.2s ease,
+		width 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+		height 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+		transform 0.08s linear;
+	mix-blend-mode: difference;
+}
+
+.visible {
+	opacity: 1;
+}
+
+.interactive {
+	width: 30px;
+	height: 30px;
+	transform:
+		translate3d(calc(var(--cursor-x, -100px) - 50%),
+			calc(var(--cursor-y, -100px) - 50%),
+			0) rotate(45deg) scale(1);
+}
+
+.cursor::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border: 1px solid #fff;
+}
+
+.dot {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 3px;
+	height: 3px;
+	background: #fff;
+	transform:
+		translate(-50%, -50%) rotate(-45deg);
+	transition:
+		width 0.2s ease,
+		height 0.2s ease;
+}
+
+.interactive .dot {
+	width: 4px;
+	height: 4px;
+}
+
+@media (pointer: coarse) {
+	.cursor {
+		display: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cursor {
+		transition: none;
+	}
+}

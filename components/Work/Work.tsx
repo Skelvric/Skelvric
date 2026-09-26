@@ -32,27 +32,43 @@ export default function Work({ lang }: { lang: Locale }) {
       </div>
 
       <div className={styles.gridRow}>
-        {data.projects.map((project, index) => (
-          <a
-            key={index}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${styles.cell} col-span-1 md:col-span-2 ${styles.projectCard} group block`}
-          >
-            <div className={styles.imageWrapper}>
-              <span className="absolute top-4 left-4 z-10 bg-[var(--bg-color)] text-[var(--text-color)] px-2 py-1 text-[10px] uppercase font-mono font-bold border border-[var(--border-color)]">
-                {project.tag}
-              </span>
-              <ProjectGraphic index={index} />
-            </div>
+        {data.projects.map((project, index) => {
+          const isLastProject = index === data.projects.length - 1;
+          const hasOddProjects = data.projects.length % 2 !== 0;
 
-            <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
-              <h3 className="text-2xl font-black uppercase tracking-tight mb-2">{project.title}</h3>
-              <p className="text-sm font-medium text-[var(--muted-text)]">{project.desc}</p>
-            </div>
-          </a>
-        ))}
+          const shouldFillRow = isLastProject && hasOddProjects;
+
+          return (
+            <a
+              key={index}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.cell} ${shouldFillRow
+                  ? 'col-span-1 md:col-span-4'
+                  : 'col-span-1 md:col-span-2'
+                } ${styles.projectCard} group block`}
+            >
+              <div className={styles.imageWrapper}>
+                <span className="absolute top-4 left-4 z-10 bg-[var(--bg-color)] text-[var(--text-color)] px-2 py-1 text-[10px] uppercase font-mono font-bold border border-[var(--border-color)]">
+                  {project.tag}
+                </span>
+
+                <ProjectGraphic index={index} />
+              </div>
+
+              <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-2">
+                  {project.title}
+                </h3>
+
+                <p className="text-sm font-medium text-[var(--muted-text)]">
+                  {project.desc}
+                </p>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </section>
   );
