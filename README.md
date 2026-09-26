@@ -46,9 +46,11 @@ skelvric/
 │   ├── Process/             # 4-stage agile workflow schema
 │   ├── Clients/             # Target industry sectors
 │   ├── CTA/                 # Action call & contact area
+│   ├── Cursor/              # Custom cursor
 │   └── Footer/              # Terminal-style footer & location details
 ├── data/
 │   └── content.ts           # Centralized EN and TR text database
 ├── tailwind.config.ts       # Tailwind configuration
 ├── tsconfig.json            # TypeScript settings
 └── package.json             # Project dependencies
+```

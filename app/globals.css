@@ -51,7 +51,23 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6, p, span {
+@media (hover: hover) and (pointer: fine) {
+  html,
+  html *,
+  html *::before,
+  html *::after {
+    cursor: none !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
   overflow-wrap: break-word;
   word-break: break-word;
 }

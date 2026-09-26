@@ -4,6 +4,8 @@ import { Space_Grotesk } from "next/font/google";
 
 import { Analytics } from "@vercel/analytics/next";
 
+import Cursor from '@/components/Cursor/Cursor';
+
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -31,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={spaceGrotesk.className}>
+        <Cursor />
         {children}
         <Analytics />
       </body>
